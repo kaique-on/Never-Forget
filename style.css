@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+}
+
+button, a {
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    border-width: 0;
+    background: none;
+    color: White;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: inherit;
+    text-decoration: none;
+    height: fit-content;
+  }
+
+body {
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(133,31,239,1) 0%, rgba(2,0,36,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+span {
+    font-weight: 600;
+}
+.caixa-frase{
+    width: 60%;
+    margin: auto;
+}
+.frase {
+    width: 40%;
+    font-size: 56px;
+}
+.container-principal {
+    width: 30%;
+    margin: auto;
+    align-items: center;
+    
+}
+.container_horario {
+    background-color: #0b2549b0;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #184381;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.horario-opcoes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    height: fit-content;
+    align-items: center;
+}
+
+.opcao_selecionado {
+    padding: 12px 8px;
+    background-color: #184381;
+    border-radius: 8px;
+    font-weight: 600
+}
+
+#horario {
+    font-size: 100px;
+    width: fit-content;
+}
+#start {
+    background: rgb(161,130,228);
+    background: linear-gradient(180deg, rgba(161,130,228,1) 0%, rgba(29,69,121,1) 100%); 
+    padding: 10px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+#add-tarefa {
+    color: #b07ce5;
+    width: 100%;
+    border: 2px solid #b07ce5;
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 18px 0px;
+}
+.container-adicionar {
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}

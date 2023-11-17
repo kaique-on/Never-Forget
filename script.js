@@ -5,37 +5,39 @@ const botaoDescanso = document.getElementById('descanso_curto')
 const botaoDescansoLongo = document.getElementById('descanso_longo')
 const addTarefa = document.getElementById('add-tarefa')
 const start = document.getElementById('start')
+const minutos = document.getElementById('tempo-minutos')
+const segundos = document.getElementById('tempo-segundos')
 let iniciado = false;
 //funções que serão usadas e chamadas durante o script
 function funcaoContador() {
     if(!iniciado){
-        let tempoSegundos = 60;
+        start.innerText = 'Pausar';
+        let tempoMinutos = parseInt(minutos.value)
+        let minutosInt = parseInt (tempoMinutos)
+        let tempoSegundos = parseInt(segundos.value)
+        let segundosInt = parseInt(tempoSegundos)
         iniciado = true
-        let tempoMinutos = 24;
         const timer = setInterval(function(){
+        console.log(tempoSegundos)    
+        segundos.value = `${tempoSegundos}`
+        minutos.value = `${tempoMinutos}`
         tempoSegundos --;
-
-        if(tempoSegundos == 0 && tempoMinutos == 0){
+        if(tempoSegundos < 0){
+            tempoSegundos = 59;
+            tempoMinutos -= 1;
+        }
+        
+        if(tempoMinutos == -1 && tempoSegundos == 59) {
             tempoSegundos = 0
             tempoMinutos = 0
-            contador.textContent = `0${tempoMinutos}:0${tempoSegundos}`
+            segundos.value = `0${tempoSegundos}`
+            minutos.value = `0${tempoMinutos}`
             iniciado = false;
             clearInterval(timer)
-        }
-        if(tempoSegundos == 0){
-            tempoSegundos = 59;
-            tempoMinutos -= 1
-        }
-
-        if(tempoSegundos < 10){
-            contador.textContent = `${tempoMinutos}:0${tempoSegundos}`
-        }else{
-            contador.textContent = `${tempoMinutos}:${tempoSegundos}`
-        } 
-
-        
-        }, 10)
-    }   
+            start.innerText = 'Começar'
+        }   
+        }, 1000)   
+}
 }
 
 function funcaoAdicionar() {

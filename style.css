@@ -20,6 +20,10 @@ button, a {
     height: fit-content;
   }
 
+  button {
+    cursor: pointer;
+  }
+
 body {
     height: 100%;
     min-height: 100vh;
@@ -28,6 +32,13 @@ body {
     background-size: cover;
     font-family: 'Roboto', sans-serif;
     color: white;
+}
+
+main {
+    margin: 64px auto;
+    gap: 64px;
+    display: flex;
+    flex-direction: column;
 }
 
 span {
@@ -65,7 +76,6 @@ span {
     height: fit-content;
     align-items: center;
 }
-
 .opcao_selecionado {
     padding: 12px 8px;
     background-color: #184381;
@@ -73,10 +83,16 @@ span {
     font-weight: 600
 }
 
-#horario {
-    font-size: 100px;
-    width: fit-content;
+.horario {
+    font-size: 60px;
 }
+
+.numeros  {
+    all: unset;
+    text-align: center;
+    
+}
+
 #start {
     background: rgb(161,130,228);
     background: linear-gradient(180deg, rgba(161,130,228,1) 0%, rgba(29,69,121,1) 100%); 
@@ -98,4 +114,29 @@ span {
     display: flex;
     flex-direction: column;
     gap: 40px;
+}
+
+footer {
+    align-self: center;
+    color: #6e7987;
+    font-weight: 600;
+}
+
+.lista-tarefas {
+    display: flex;
+    flex-direction: column;
+}
+.tarefa {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    background-color: rgba(255, 255, 255, 0.896);
+    border-radius: 8px;
+}
+.bolinha-grande {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 100px;
+    margin: auto 16px;
 }

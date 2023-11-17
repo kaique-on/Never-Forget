@@ -8,6 +8,7 @@
     <title>Never Forget</title>
 </head>
 <body>
+    <main>
     <div class="caixa-frase">
         <p class="frase">Aprimore sua performance, <span>dedique-se ao que realmente importa.</span></p>
     </div>
@@ -20,8 +21,13 @@
                 <button id="descanso_curto">Descanso Curto</button>
                 <button id="descanso_longo">Descanso Longo</button>
             </div>
-            <h1 id="horario">25:00</h1>
             
+            <div class="horario">
+            <input class="numeros" type="number" maxlength="2" minlength="1" inputmode="numeric" max="59" min="0" id="tempo-minutos" value="00" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"></input>
+            :
+            <input class="numeros" type="number" maxlength="2" minlength="1" inputmode="numeric" max="59" min="0" id="tempo-segundos" value="05" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); if (this.value > 59) this.value = 59;"></input>
+            </div>    
+
                 <div>
                     <input type="checkbox">
                     Música
@@ -38,9 +44,21 @@
             <hr>
 
             <h1>Lista de Tarefas:</h1>
+
+            <div class="lista-tarefas">
+                <div class="tarefa">
+                    <div class="bolinha-grande">
+                        <div class="bolinha-pequena"></div>
+                    </div>
+                </div>
+            </div>
+
             <button id="add-tarefa">Adicionar nova tarefa</button>
             
         </div>
     </section>
+
+    <footer></footer>
+</main>
 </body>
 </html>
